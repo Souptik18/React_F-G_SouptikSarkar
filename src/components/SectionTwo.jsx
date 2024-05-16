@@ -45,14 +45,13 @@ function SectionTwo() {
           setRowData(existingData);
         }
 
-        // Clear formData and phone from localStorage
         localStorage.removeItem("formData");
         localStorage.removeItem("phone");
       }
     };
 
     updateRowData();
-  }, [rowData]); // Add rowData as a dependency
+  }, [rowData]);
 
   // to delete items you can select the rows directly or click the checkbox and press delete
   const deleteItem = useCallback(() => {

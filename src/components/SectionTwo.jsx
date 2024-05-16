@@ -36,24 +36,23 @@ function SectionTwo() {
 
         let existingData = JSON.parse(localStorage.getItem("rowData")) || [];
         // if there is any duplicate entry it will not be added
-        let isDuplicate = false;
-        for (let i = 0; i < existingData.length; i++) {
-          if (existingData[i].id === newData.id) {
-            isDuplicate = true;
-            break;
-          }
-        }
+        let isDuplicate = existingData.some((item) => item.id === newData.id);
+
         //if not duplicated push into new array and store in Local Storage and retrieve the data to store in rowData AG_GRID
         if (!isDuplicate) {
           existingData.push(newData);
           localStorage.setItem("rowData", JSON.stringify(existingData));
           setRowData(existingData);
         }
+
+        // Clear formData and phone from localStorage
+        localStorage.removeItem("formData");
+        localStorage.removeItem("phone");
       }
     };
 
     updateRowData();
-  }, []);
+  }, [rowData]); // Add rowData as a dependency
 
   // to delete items you can select the rows directly or click the checkbox and press delete
   const deleteItem = useCallback(() => {

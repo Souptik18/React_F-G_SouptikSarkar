@@ -1,8 +1,12 @@
-# React + Vite
+## React assignment on creating a feedback form with table details to view the submissions 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Steps to view the project -
+1. Download the file as Zip and extract to a folder
+2. Open the editor of your choice example vs code
+3. Open the directory to the root folder in the terminal of the editor
+4. run _npm install_
+5. as this project is built using vite and tailwind css it should run smoothly on typing _npm run dev_ after executing the npm install
+6. and project should be up and running
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Thanks !!
